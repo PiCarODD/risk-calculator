@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Assessment Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <br />
+        <div class="row">   
+            <div class="col-md-10">
+                <h3 class="text-primary">Risk Assessment Calculator</h3>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary" id="projectCalc">Calculate</button>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <h5 class="text-info">Risk Factors</h5>
+                
+                <div class="form-group">
+                    <label for="DWLow">Low </label>
+                    <div class="input-group">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text bg-info text-white">Low</span>
+                        </span>
+                        <input type="number" id="DWLow" name="DWLow" class="form-control" value="0" min="0">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="DWMedium">Medium</label>
+                    <div class="input-group">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text bg-warning text-white">Medium</span>
+                        </span>
+                        <input type="number" id="DWMedium" name="DWMedium" class="form-control" value="0" min="0">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="DWHigh">High</label>
+                    <div class="input-group">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text bg-danger text-white">High</span>
+                        </span>
+                        <input type="number" id="DWHigh" name="DWHigh" class="form-control" value="0" min="0">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="DWCritical">Critical</label>
+                    <div class="input-group">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text bg-dark text-white">Critical</span>
+                        </span>
+                        <input type="number" id="DWCritical" name="DWCritical" class="form-control" value="0" min="0">
+                    </div>
+                </div>
+
+                <!-- Vuln Scan Section -->
+                <h5 class="text-info">Web Vulnerability Analysis</h5>
+                <div class="form-group">
+                    <label for="VSLow">Low</label>
+                    <div class="input-group">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text bg-info text-white">Low</span>
+                        </span>
+                        <input type="number" id="VSLow" name="VSLow" class="form-control" value="0" min="0">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="VSMedium">Medium</label>
+                    <div class="input-group">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text bg-warning text-white">Medium</span>
+                        </span>
+                        <input type="number" id="VSMedium" name="VSMedium" class="form-control" value="0" min="0">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="VSHigh">High</label>
+                    <div class="input-group">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text bg-danger text-white">High</span>
+                        </span>
+                        <input type="number" id="VSHigh" name="VSHigh" class="form-control" value="0" min="0">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="VSCritical">Critical</label>
+                    <div class="input-group">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text bg-dark text-white">Critical</span>
+                        </span>
+                        <input type="number" id="VSCritical" name="VSCritical" class="form-control" value="0" min="0">
+                    </div>
+                </div>
+
+                <!-- Network Scan Section -->
+                <h5 class="text-info">Network Vulnerability Analysis</h5>
+                <div class="form-group">
+                    <label for="NSLow">Low</label>
+                    <div class="input-group">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text bg-info text-white">Low</span>
+                        </span>
+                        <input type="number" id="NSLow" name="NSLow" class="form-control" value="0" min="0">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="NSMedium">Medium</label>
+                    <div class="input-group">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text bg-warning text-white">Medium</span>
+                        </span>
+                        <input type="number" id="NSMedium" name="NSMedium" class="form-control" value="0" min="0">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="NSHigh">High</label>
+                    <div class="input-group">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text bg-danger text-white">High</span>
+                        </span>
+                        <input type="number" id="NSHigh" name="NSHigh" class="form-control" value="0" min="0">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="NSCritical">Critical</label>
+                    <div class="input-group">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text bg-dark text-white">Critical</span>
+                        </span>
+                        <input type="number" id="NSCritical" name="NSCritical" class="form-control" value="0" min="0">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h5 class="text-info">Category Scores</h5>
+                <p id="DWCategory" class="mb-2">Dark Web Analysis: 0 | <span id="DWCategoryGrade"></span></p>
+                <p id="VSCategory" class="mb-2">Vuln Scan: 0 | <span id="VSCategoryGrade"></span></p>
+                <p id="NSCategory" class="mb-2">Network Scan: 0 | <span id="NSCategoryGrade"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        /* Custom JS */
+        $(document).ready(function() {
+            $("#projectCalc").click(function() {
+                // Calculate scores for Dark Web Analysis
+                var dwLow = +$("#DWLow").val();
+                var dwMedium = +$("#DWMedium").val();
+                var dwHigh = +$("#DWHigh").val();
+                var dwCritical = +$("#DWCritical").val();
+
+                var dwScore = (dwLow * 1) + (dwMedium * 3) + (dwHigh * 5) + (dwCritical * 7);
+                $("#DWCategory").text("Dark Web Analysis: " + dwScore + " | " + getCategory(dwScore, "DWCategoryGrade"));
+
+                // Calculate scores for Vulnerability Scan
+                var vsLow = +$("#VSLow").val();
+                var vsMedium = +$("#VSMedium").val();
+                var vsHigh = +$("#VSHigh").val();
+                var vsCritical = +$("#VSCritical").val();
+
+                var vsScore = (vsLow * 1) + (vsMedium * 3) + (vsHigh * 5) + (vsCritical * 7);
+                $("#VSCategory").text("Vuln Scan: " + vsScore + " | " + getCategory(vsScore, "VSCategoryGrade"));
+
+                // Calculate scores for Network Scan
+                var nsLow = +$("#NSLow").val();
+                var nsMedium = +$("#NSMedium").val();
+                var nsHigh = +$("#NSHigh").val();
+                var nsCritical = +$("#NSCritical").val();
+
+                var nsScore = (nsLow * 1) + (nsMedium * 3) + (nsHigh * 5) + (nsCritical * 7);
+                $("#NSCategory").text("Network Scan: " + nsScore + " | " + getCategory(nsScore, "NSCategoryGrade"));
+            });
+
+            function getCategory(score) {
+                if (score < 5) {
+                    return 'A';
+                } else if (score < 10) {
+                    return 'B';
+                } else if (score < 15) {
+                    return 'C';
+                } else if (score < 20) {
+                    return 'D';
+                } else {
+                    return 'E';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
