@@ -1,0 +1,2 @@
+# risk-calculator
+Calculate risks
